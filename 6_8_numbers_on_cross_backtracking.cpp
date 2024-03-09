@@ -8,14 +8,14 @@ int main(){
 	int cb = -1, sol_num = 0; // cb = current box
 	
 	static int a[8][5] = {{-1}, //0
-						{0, -1}, // 1
-						{0, -1}, // 2
-						{0, 1, 2, -1}, // 3
-						{0, 1, 3, -1}, // 4
-						{1, 4, -1}, // 5
-						{2, 3, 4, -1}, // 6
-						{3, 4, 5, 6, -1} // 7
-					  };
+			{0, -1}, // 1
+			{0, -1}, // 2
+			{0, 1, 2, -1}, // 3
+			{0, 1, 3, -1}, // 4
+			{1, 4, -1}, // 5
+			{2, 3, 4, -1}, // 6
+			{3, 4, 5, 6, -1} // 7
+			};
 	
 	
 	q[cb] = 1;
@@ -28,7 +28,7 @@ int main(){
 		if (q[cb] == 8) goto backtrack;
 		
 		//if other boxes have the same number
-		for (int i = 0; i < cb; ++i){ // If the number in square c has already been used, return false.
+		for (int i = 0; i < cb; ++i){ // If the number in square c has already been used, goto nr
 			if (q[cb] == q[i])
 				goto nr;
 		}
